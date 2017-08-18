@@ -24,7 +24,7 @@ namespace telemantics_dotnet
             var newVehicle = new VehicleInfo(vinInput,odometerInput,consumptionInput,odometerLastOilChangeInput,engineSizeInput);
             Console.WriteLine($"{newVehicle}");
 
-            // new TelematicsService().Report(newVehicle);
+            new TelematicService().Report(newVehicle);
 
         }
     }
