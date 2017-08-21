@@ -29,7 +29,7 @@ namespace telemantics_dotnet
             var totalLastOilChange = 0d;
             var totalEngineSize = 0d;
 
-            var itemTemplate = $@"<table align='center' border='1'>
+            var itemTemplate = @"<table align='center' border='1'>
           <tr>
               <th>VIN</th><th>Odometer (miles)</th><th>Consumption (gallons)</th><th>Last Oil Change</th><th>Engine Size (liters)</th>
           </tr>
@@ -66,7 +66,7 @@ namespace telemantics_dotnet
               <th>Odometer (miles) |</th><th>Consumption (gallons) |</th><th>Last Oil Change |</th><th>Engine Size (liters)</th>
           </tr>
           <tr>
-              <td align='center'>{odometerAverage}</td><td align='center'>{consumptionAverage}</td><td align='center'>{oilChangeAverage}</td align='center'><td align='center'>{engineSizeAverage}</td>
+              <td align='center'>{odometerAverage: 0.0}</td><td align='center'>{consumptionAverage}</td><td align='center'>{oilChangeAverage}</td align='center'><td align='center'>{engineSizeAverage}</td>
           </tr>
       </table>
       <h1 align='center'>History</h1>
