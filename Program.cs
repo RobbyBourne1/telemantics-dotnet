@@ -25,6 +25,8 @@ namespace telemantics_dotnet
             Console.WriteLine($"{newVehicle}");
 
             new TelematicService().Report(newVehicle);
+            new TelematicService().DeSan(newVehicle);
+            Console.WriteLine($"{newVehicle}");
 
         }
     }

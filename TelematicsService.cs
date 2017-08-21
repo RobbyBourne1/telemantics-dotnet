@@ -21,7 +21,7 @@ namespace telemantics_dotnet
 
         public void DeSan(VehicleInfo vehicle)
         {
-            string[] files = System.IO.Directory.GetFiles(path: "/Users/robby/documents/telemantics-dotnet", searchPattern: "*.json");
+            string[] files = System.IO.Directory.GetFiles(".", "*.Json");
             ///LIST CREATION GOES HERE
             List<object> vehicleList = new List<object>();
             foreach (var item in files)
