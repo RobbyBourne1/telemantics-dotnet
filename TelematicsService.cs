@@ -11,7 +11,7 @@ namespace telemantics_dotnet
 
         public void Report(VehicleInfo vehicleInfo)
         {
-            using (var writer = new StreamWriter(File.Open($"{vehicleInfo.VIN}.Json", FileMode.OpenOrCreate)))
+            using (var writer = new StreamWriter(File.Open($"{vehicleInfo.VIN}.json", FileMode.OpenOrCreate)))
             using (var jsonWriter = new JsonTextWriter(writer))
             {
                 serializer.Serialize(writer, vehicleInfo);
@@ -21,7 +21,7 @@ namespace telemantics_dotnet
 
         public void DeSan(VehicleInfo vehicle)
         {
-            string[] files = System.IO.Directory.GetFiles(".", "*.Json");
+            string[] files = System.IO.Directory.GetFiles(".", "*.json");
             ///LIST CREATION GOES HERE
             List<object> vehicleList = new List<object>();
             foreach (var item in files)
